@@ -1,4 +1,4 @@
-from domain.models.pizza import Margherita, Pepperoni
+from ..models.pizza import Margherita, Pepperoni
 
 class PizzaFactory:
     @staticmethod
