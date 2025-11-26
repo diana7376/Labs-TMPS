@@ -199,23 +199,7 @@ pizza = ToppingDecorator(pizza, "olives")
 
 ---
 
-## Example Output
 
-```
-Email sent to Bob: Your custom pizza order is confirmed!
-Email sent to Alice: Your classic pizza order is confirmed!
-Current Pizza Orders:
-Order 1:
-  Customer: Bob
-  Pizza: Pizza(size=Large, crust=Thin, toppings=) + pepperoni + mushrooms
-------------------------------
-Order 2:
-  Customer: Alice
-  Pizza: Pizza(size=Medium, crust=Classic, toppings=mozzarella, basil)
-------------------------------
-```
-
----
 ## Behavioral Design Patterns Implemented
 ### 1. Observer Pattern
 Notifies all registered observers (such as email and SMS channels) whenever a new pizza order is added to the system.
@@ -340,6 +324,29 @@ facade.deliver_order("Alice")
 ```
 
 ---
+## Example Output
+
+```
+Email sent to Bob: Your pizza order placed.
+SMS sent to Bob: Your pizza order placed.
+Email sent to Alice: Your pizza order placed.
+SMS sent to Alice: Your pizza order placed.
+
+Current Pizza Orders:
+Order 1
+ Customer: Bob
+ Pizza: Pizza(size=Large, crust=Thin, toppings=) + pepperoni + mushrooms
+------------------------------
+Order 2
+ Customer: Alice
+ Pizza: Pizza(size=Medium, crust=Classic, toppings=mozzarella, basil)
+------------------------------
+Home delivery: Delivering pizza to Bob
+Pickup: Alice will pick up the pizza.
+```
+
+---
+
 ## How to Run
 
 Run the application **from the project root**:
