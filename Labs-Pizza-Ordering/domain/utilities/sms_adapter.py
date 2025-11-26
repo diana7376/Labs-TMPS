@@ -1,6 +1,5 @@
-from ..utilities.notification_interface import NotificationService
+from domain.utilities.order_observer import OrderObserver
 
-class SMSAdapter(NotificationService):
-    def send_notification(self, customer, message):
-        # Simulate sending SMS (stub)
-        print(f"SMS sent to {customer}: {message}")
+class SMSAdapter(OrderObserver):
+    def update(self, order, event_type):
+        print(f"SMS sent to {order['customer']}: Your pizza order {event_type}.")
